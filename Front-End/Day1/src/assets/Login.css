@@ -1,0 +1,24 @@
+.outer
+{
+    background-color: rgb(255, 115, 0);
+    border: 20px solid brown;
+    padding: 40px;
+    color: rgb(9, 3, 14);
+    width: 580px;
+    position: relative;
+}
+label
+{
+    width: 250px;
+    /* background-color: aliceblue; */
+}
+/* .onet
+{
+    background-color: antiquewhite;
+} */
+.cen
+{
+    backface-visibility: hidden;
+    padding: 10px;
+    border-top: 3px solid rgb(207, 83, 21);
+}
