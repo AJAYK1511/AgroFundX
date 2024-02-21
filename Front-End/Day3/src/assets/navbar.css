@@ -1,0 +1,46 @@
+ul {
+  list-style-type: none;
+  padding: 2px;
+  font-size: 18px;
+  border-bottom: 2px solid rgb(59, 57, 57);
+  margin: 0;
+  width: calc(100% - 55px); /* Adjusted width to accommodate sidebar symbol */
+  background-color: rgb(87, 236, 121);
+  height: 55px;
+  position: fixed; 
+  top: 0;
+  left: 58px; 
+  z-index: 9995;
+}
+
+.ele {
+  float: left;
+  margin-left: 15px;
+}
+.sele
+{
+  float: left;
+  margin-left: 15px;
+}
+.ele a, .sele a {
+  display: block;
+  margin-left: 10px;
+  color: rgb(6, 5, 5);
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+  border-radius: 15px;
+}
+
+.ele a:hover, .sele a:hover {
+  background-color: rgb(43, 53, 48);
+  color: white;
+}
+
+.sele a {
+  background-color: rgb(43, 53, 48);
+  color: rgb(229, 219, 219);
+}
+.gg {
+  margin-top: 0px;
+}
