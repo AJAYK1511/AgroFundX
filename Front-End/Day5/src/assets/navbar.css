@@ -1,0 +1,48 @@
+.list-container {
+  list-style-type: none;
+  padding: 2px;
+  font-size: 18px;
+  border-bottom: 2px solid rgb(59, 57, 57);
+  margin: 0;
+  width: calc(100% - 55px); /* Adjusted width to accommodate sidebar symbol */
+  background-color: rgb(87, 236, 121);
+  height: 55px;
+  position: fixed; 
+  top: 0;
+  left: 58px; 
+  z-index: 9995;
+}
+
+.element {
+  float: left;
+  margin-left: 15px;
+}
+
+.selected {
+  float: left;
+  margin-left: 15px;
+}
+
+.element a, .selected a {
+  display: block;
+  margin-left: 10px;
+  color: rgb(6, 5, 5);
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+  border-radius: 15px;
+}
+
+.element a:hover, .selected a:hover {
+  background-color: rgb(43, 53, 48);
+  color: white;
+}
+
+.selected a {
+  background-color: rgb(43, 53, 48);
+  color: rgb(229, 219, 219);
+}
+
+.container {
+  margin-top: 0px;
+}
