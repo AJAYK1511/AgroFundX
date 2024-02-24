@@ -1,0 +1,33 @@
+/* Table container styles */
+.custom-table {
+  margin: 0 auto;
+  width: auto;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+.fundtable
+{
+  width: 100%;
+  padding: 40px 225px;
+
+}
+  /* Table header styles */
+  .custom-header {
+    background-color: #b31515;
+    font-weight: bold;
+    padding: 10px;
+  }
+  
+  /* Table body styles */
+  .custom-row:nth-child(even) {
+    background-color: #eb7272;
+  }
+  .custom-row:nth-child(odd) {
+    background-color: #cf8c8c;
+  }
+  
+  /* Table cell styles */
+  .custom-cell {
+    padding: 10px;
+  }
+  
