@@ -1,0 +1,74 @@
+.wholedash {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loan-item{
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px; 
+  padding: 10px;
+  background-color: #dfe3ec;
+  margin: 20px;
+  color: #2f2120;
+  border-radius: 5px;
+}
+.admindash-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.loan-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  /* border: 2px solid gray; */
+}
+
+.admindash-loan-item {
+  padding: 10px;
+  /* background-color: #ccc; */
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #a4e790;
+  
+}
+
+.admindash-loan-name {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.admindash-button-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+.admin-dashboard button {
+  margin: 20px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.admindash-button-accept {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+.admindash-button-reject {
+  background-color: #f44336;
+  color: #fff;
+}
+.admin-dashboard
+{
+  padding: 10px;
+  width:90%;
+}
+.buttonfordash
+{
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px; 
+  background-color: #79dbad;
+  color: rgb(34, 29, 29);
+}

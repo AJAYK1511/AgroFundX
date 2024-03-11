@@ -1,0 +1,48 @@
+.list-container {
+  list-style-type: none;
+  padding: 2px;
+  font-size: 18px;
+  border-bottom: 2px solid rgb(59, 57, 57);
+  margin: 0;
+  width: calc(100% - 55px); /* Adjusted width to accommodate sidebar symbol */
+  background-color: #2eb767;
+  height: 55px;
+  position: fixed; 
+  top: 0;
+  left: 58px; 
+  z-index: 9995;
+}
+
+.element {
+  float: left;
+  margin-left: 15px;
+}
+
+.selected {
+  float: left;
+  margin-left: 15px;
+}
+
+.element a, .selected a {
+  display: block;
+  margin-left: 10px;
+  color: white;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.element a:hover, .selected a:hover {
+  background-color: rgb(240, 232, 232);
+  color: rgb(62, 42, 42);
+}
+
+.selected a {
+  background-color: rgb(240, 232, 232);
+  color: rgb(62, 42, 42);
+}
+
+.container {
+  margin-top: 0px;
+}

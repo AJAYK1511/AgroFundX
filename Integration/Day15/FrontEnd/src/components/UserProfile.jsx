@@ -1,0 +1,310 @@
+// import  { useState, useEffect } from 'react';
+// import PopupMessage from './PopupMessage';
+// import '../assets/UserProfile.css'
+// const UserProfile = () => {
+
+//   const [showPopup, setShowPopup] = useState(false);
+//   const [popupMessage, setPopupMessage] = useState('');
+
+  
+
+
+//   const [user, setUser] = useState({
+//     name: 'Mohan Kumar',
+//     location: 'Green gardens, Attur Main Road, Salem',
+//     age: 38,
+//     contact: 'mohankumar@email.com | (555) 123-4567',
+//   });
+
+//   const [editedUser, setEditedUser] = useState({ ...user });
+//   const [isUserEditing, setIsUserEditing] = useState(false);
+
+//   const [farm, setFarm] = useState({
+//     farmName: 'Green Acres Farm',
+//     location: 'Green gardens, Attur Main Road, Salem',
+//     farmSize: '50 acres',
+//     crops: ['Wheat', 'Corn', 'Soybeans'],
+//     livestock: 'None',
+//   });
+
+//   const [editedFarm, setEditedFarm] = useState({ ...farm });
+//   const [isFarmEditing, setIsFarmEditing] = useState(false);
+
+//   const handleUserEdit = () => {
+//     setIsUserEditing(true);
+//   };
+
+//   const handleUserSave = () => {
+//     setUser({ ...editedUser });
+//     setIsUserEditing(false);
+//     setPopupMessage('Profile saved successfully!');
+//     setShowPopup(true);
+
+//     // Close the pop-up after a few seconds (you can adjust the timeout)
+//     setTimeout(() => {
+//       setShowPopup(false);
+//     }, 3000);
+//   };
+
+//   const handleUserCancel = () => {
+//     setEditedUser({ ...user });
+//     setIsUserEditing(false);
+//   };
+
+//   const handleFarmEdit = () => {
+//     setIsFarmEditing(true);
+//   };
+
+//   const handleFarmSave = () => {
+//     setFarm({ ...editedFarm });
+//     setIsFarmEditing(false);
+//     setPopupMessage('Profile saved successfully!');
+//     setShowPopup(true);
+
+//     // Close the pop-up after a few seconds (you can adjust the timeout)
+//     setTimeout(() => {
+//       setShowPopup(false);
+//     }, 3000);
+//   };
+
+//   const handleFarmCancel = () => {
+//     setEditedFarm({ ...farm });
+//     setIsFarmEditing(false);
+//   };
+
+//   useEffect(() => {
+//     // Fetch user and farm data from an API and set initial state
+//     // Example:
+//     // fetchUserData(userId)
+//     //   .then((userData) => {
+//     //     setUser(userData);
+//     //     setEditedUser(userData);
+//     //   })
+//     //   .catch((error) => {
+//     //     console.error('Error fetching user data:', error);
+//     //   });
+
+//     // Similar logic for fetching farm data
+//   }, []); // Add dependencies based on your actual implementation
+
+//   return (
+//     <>
+//     <div className="profile-container">
+//       <div>
+//       <div className="profile-header">
+//         <h1 className="profile-title">{user.name}&apos;s Profile</h1>
+//       </div>
+//       <section className="user-details">
+//         <h2>User Details</h2>
+//         {isUserEditing ? (
+//           <>
+//             <label>Name: </label>
+//             <input
+//               className="input-field"
+//               type="text"
+//               value={editedUser.name}
+//               onChange={(e) => setEditedUser({ ...editedUser, name: e.target.value })}
+//             />
+//             <br />
+//             <label>Location: </label>
+//             <input
+//               className="input-field"
+//               type="text"
+//               value={editedUser.location}
+//               onChange={(e) => setEditedUser({ ...editedUser, location: e.target.value })}
+//             />
+//             <br />
+//             <label>Age: </label>
+//             <input
+//               className="input-field"
+//               type="number"
+//               value={editedUser.age}
+//               onChange={(e) => setEditedUser({ ...editedUser, age: parseInt(e.target.value, 10) || 0 })}
+//             />
+//             <br />
+//             <label>Contact: </label>
+//             <input
+//               className="input-field"
+//               type="text"
+//               value={editedUser.contact}
+//               onChange={(e) => setEditedUser({ ...editedUser, contact: e.target.value })}
+//             />
+//             <br />
+//             <button className="btn-save" onClick={handleUserSave}>Save</button>
+//             <button className="btn-cancel" onClick={handleUserCancel}>Cancel</button>
+//           </>
+//         ) : (
+//           <>
+//             <p>Name: {user.name}</p>
+//             <p>Location: {user.location}</p>
+//             <p>Age: {user.age}</p>
+//             <p>Contact: {user.contact}</p>
+//             <button className="btn-edit" onClick={handleUserEdit}>Edit</button>
+//           </>
+//         )}
+//       </section>
+
+//       <section className="farm-details">
+//         <h2>Farm Details</h2>
+//         {isFarmEditing ? (
+//           <>
+//             <label>Farm Name: </label>
+//             <input
+//               className="input-field"
+//               type="text"
+//               value={editedFarm.farmName}
+//               onChange={(e) => setEditedFarm({ ...editedFarm, farmName: e.target.value })}
+//             />
+//             <br />
+//             <label>Location: </label>
+//             <input
+//               className="input-field"
+//               type="text"
+//               value={editedFarm.location}
+//               onChange={(e) => setEditedFarm({ ...editedFarm, location: e.target.value })}
+//             />
+//             <br />
+//             <label>FarmSize: </label>
+//             <input
+//               className="input-field"
+//               type="text"
+//               value={editedFarm.farmSize}
+//               onChange={(e) => setEditedFarm({ ...editedFarm, farmSize: e.target.value })}
+//             />
+//             <br />
+//             <label>LiveStock: </label>
+//             <input
+//               className="input-field"
+//               type="text"
+//               value={editedFarm.livestock}
+//               onChange={(e) => setEditedFarm({ ...editedFarm, livestock: e.target.value })}
+//             />
+//             {/* ... Add similar input fields for other farm details */}
+//             <br />
+//             <button className="btn-save" onClick={handleFarmSave}>Save</button>
+//             <button className="btn-cancel" onClick={handleFarmCancel}>Cancel</button>
+//           </>
+//         ) : (
+//           <>
+//             <p>Farm Name: {farm.farmName}</p>
+//             <p>Location: {farm.location}</p>
+//             <p>FarmSize: {farm.farmSize}</p>
+//             <p>LiveStock: {farm.livestock}</p>
+//             {/* ... Add similar paragraphs for other farm details */}
+//             <button className="btn-edit" onClick={handleFarmEdit}>Edit</button>
+//           </>
+//         )}
+//       </section>
+//       {showPopup && <PopupMessage message={popupMessage} onClose={() => setShowPopup(false)} />}
+//     </div>
+//     </div></>
+//   );
+// };
+
+// export default UserProfile;
+
+import { useState, useEffect } from 'react';
+import { updateUser, getUserById } from '../apifolder/AppUser';
+import PopupMessage from './PopupMessage';
+import '../assets/UserProfile.css';
+
+const UserProfile = () => {
+  const [showPopup, setShowPopup] = useState(false);
+  const [popupMessage, setPopupMessage] = useState('');
+  const [user, setUser] = useState({
+    username: '',
+    email: '',
+  });
+  const [editedUser, setEditedUser] = useState({ ...user });
+  const [isUserEditing, setIsUserEditing] = useState(false);
+
+  const handleUserEdit = () => {
+    setIsUserEditing(true);
+  };
+
+  const userId = localStorage.getItem('userID');
+  const handleUserSave = async () => {
+    try {
+      await updateUser(userId, editedUser);
+      setUser({ ...editedUser });
+      setIsUserEditing(false);
+      setPopupMessage('Profile saved successfully!');
+      setShowPopup(true);
+      setTimeout(() => {
+        setShowPopup(false);
+      }, 3000);
+    } catch (error) {
+      console.error('Error updating user:', error);
+      setPopupMessage('Failed to update profile. Please try again later.');
+      setShowPopup(true);
+    }
+  };
+
+  const handleUserCancel = () => {
+    setEditedUser({ ...user });
+    setIsUserEditing(false);
+  };
+
+  useEffect(() => {
+    const fetchUserData = async () => {
+      try {
+        const userData = await getUserById(userId);
+        setUser({
+          username: userData.data.username,
+          email: userData.data.email,
+        });
+        setEditedUser({
+          username: userData.data.username,
+          email: userData.data.email,
+        });
+      } catch (error) {
+        console.error('Error fetching user data:', error);
+      }
+    };
+    fetchUserData();
+  }, [userId]);
+
+  return (
+    <div className="profile-container">
+      <div>
+        <div className="profile-header">
+          <h1 className="profile-title">{user.username}&apos;s Profile</h1>
+        </div>
+        <section className="user-details">
+          <h2>User Details</h2>
+          {isUserEditing ? (
+            <>
+              <label>Username: </label>
+              <input
+                className="input-field"
+                type="text"
+                value={editedUser.username}
+                onChange={(e) => setEditedUser({ ...editedUser, username: e.target.value })}
+              />
+              <br />
+              <label>Email: </label>
+              <input
+                className="input-field"
+                type="text"
+                value={editedUser.email}
+                onChange={(e) => setEditedUser({ ...editedUser, email: e.target.value })}
+              />
+              <br />
+              <button className="btn-save" onClick={handleUserSave}>Save</button>
+              <button className="btn-cancel" onClick={handleUserCancel}>Cancel</button>
+            </>
+          ) : (
+            <>
+              <p>Username: {user.username}</p>
+              <p>Email: {user.email}</p>
+              <button className="btn-edit" onClick={handleUserEdit}>Edit</button>
+            </>
+          )}
+        </section>
+        {showPopup && <PopupMessage message={popupMessage} onClose={() => setShowPopup(false)} />}
+      </div>
+    </div>
+  );
+};
+
+export default UserProfile;
